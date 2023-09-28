@@ -25,7 +25,7 @@ public class Run {
                         try {
                             SerializationUtils.serialize(records, SerializationUtils.FILE_NAME);
                         } catch (IOException e) {
-                            System.out.println("Hoo lee fak");
+                            System.out.println("Serialization error");
                         }
                     }
                     System.out.println("The record added.");
@@ -74,7 +74,7 @@ public class Run {
             Search search = new Search(records);
             search.edit(record);
         } catch (Exception e) {
-            System.out.println("List problem");
+            System.out.println("List is empty");
         }
     }
 
@@ -109,7 +109,7 @@ public class Run {
         try {
             records = (List<Record>) SerializationUtils.deserialize(SerializationUtils.FILE_NAME);
         } catch (Exception e) {
-            System.out.println("Load problem");
+            System.out.println("There is no contacts file, the file will be created");
         }
     }
 

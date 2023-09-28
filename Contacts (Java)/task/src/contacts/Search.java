@@ -67,7 +67,14 @@ public class Search {
                 case "menu" -> {
                     return true;
                 }
-                case "delete" -> records.remove(record);
+                case "delete" -> {
+                    records.remove(record);
+                    try {
+                        SerializationUtils.serialize(records, SerializationUtils.FILE_NAME);
+                    } catch (IOException e) {
+                        System.out.println("serialization error");
+                    }
+                }
                 case "edit" -> editRecord(record);
             }
         }
