@@ -72,7 +72,7 @@ public class Search {
                     try {
                         SerializationUtils.serialize(records, SerializationUtils.FILE_NAME);
                     } catch (IOException e) {
-                        System.out.println("serialization error");
+                        System.out.println("Serialization error");
                     }
                 }
                 case "edit" -> editRecord(record);
@@ -87,7 +87,7 @@ public class Search {
             try {
                 SerializationUtils.serialize(records, SerializationUtils.FILE_NAME);
             } catch (IOException e) {
-                System.out.println("Hoo lee fak");
+                System.out.println("Serialization error");
             }
         }
         System.out.println("Saved");
