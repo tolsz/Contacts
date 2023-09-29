@@ -6,6 +6,13 @@ Here's the link to the project: https://hyperskill.org/projects/43
 ## Usage
 Below is an example of usage. The symbol > represents the user input.
 ```shell
+[menu] Enter action (add, list, search, count, exit): > add
+Enter the type (person, organization): > organization
+Enter the organization name: > Decent Pizza Shop
+Enter the address: > Wall St. 1
+Enter the number: > +0 (123) 456-789-9999
+The record added.
+
 [menu] Enter action (add, list, search, count, exit): > count
 The Phone Book has 6 records.
 
